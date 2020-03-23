@@ -1,10 +1,10 @@
 <template>
-  <b-container fluid>
+  <b-container>
     <!-- User Interface controls -->
     <b-row>
       <b-col lg="6" class="my-1">
         <b-form-group
-          label="Sort"
+          label="Ordenar"
           label-cols-sm="3"
           label-align-sm="right"
           label-size="sm"
@@ -246,6 +246,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
         let me=this;
         axios.get(me.url+'/analysis/index').then(function (response) {
           me.arrayAnalysis = response.data;
+          me.totalRows = me.arrayAnalysis.length;
           })
         .catch(function (error) {
         console.log(error);

@@ -69,5 +69,18 @@ class HeadboardsController extends Controller
             }
         
     }
+    public function cargarPdfHeadboards(Request $request) 
+    {     
+        $id_headboards = $request->id_headboards;
+        
+        $ficha_estudiante = json_decode(Reporte::where('id_headboards', '=', $id_headboards)->firstOrFail());
+               
+        $pdf = \PDF::loadView('pdf.solicitud', 
+            [                   
+                'solicitud_analysis' => $solicitud_analysis,                           
+            ]
+        );       
+        return $pdf->stream("solicitud_analysis.pdf", array("Attachment" => false));
+    }
 
 }

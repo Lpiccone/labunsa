@@ -89,7 +89,7 @@
             <div class="content">
                 <div>
                     <!--<vistaanalysis :url="url"></vistaanalysis>-->
-                    <analysis3 :url="url"></analysis3>
+                    <analysis2 :url="url"></analysis2>
                 </div>
             </div>
         </div>

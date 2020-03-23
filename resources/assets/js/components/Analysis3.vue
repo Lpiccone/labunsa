@@ -3,25 +3,25 @@
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group
         id="input-group-1"
-        label="Email address:"
+        label="Dirección de Email:"
         label-for="input-1"
-        description="Email rellenar"
+        description=""
       >
         <b-form-input
           id="input-1"
           v-model="form.email"
           type="email"
           required
-          placeholder="Enter email"
+          placeholder="Ingrese Email"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
         <b-form-input
           id="input-2"
           v-model="form.name"
           required
-          placeholder="Enter name"
+          placeholder="Ingrese Nombre"
         ></b-form-input>
       </b-form-group>
 
