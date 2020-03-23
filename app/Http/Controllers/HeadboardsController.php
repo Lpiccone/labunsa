@@ -73,9 +73,9 @@ class HeadboardsController extends Controller
     {     
         $id_headboards = $request->id_headboards;
         
-        $ficha_estudiante = json_decode(Reporte::where('id_headboards', '=', $id_headboards)->firstOrFail());
+        $solicitud_analysis = json_decode(HeadboardsModel::where('id_headboards', '=', $id_headboards)->firstOrFail());
                
-        $pdf = \PDF::loadView('pdf.solicitud', 
+        $pdf = \PDF::loadView('pdf.ficha', 
             [                   
                 'solicitud_analysis' => $solicitud_analysis,                           
             ]

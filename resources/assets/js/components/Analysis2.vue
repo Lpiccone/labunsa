@@ -135,11 +135,8 @@
       </template>
 
       <template v-slot:cell(actions)="row">
-        <b-button size="sm" @click="info(row.item, row.index, $event.target)" class="mr-1">
-          Info modal
-        </b-button>
-        <b-button size="sm" @click="row.toggleDetails">
-          {{ row.detailsShowing ? 'Hide' : 'Show' }} Details
+        <b-button size="sm" @click="cargarPDF(row.item.id_headboards)" class="mr-1">
+          PDF
         </b-button>
       </template>
 
@@ -284,6 +281,11 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
                     console.log(error);
                 });
             },
+            cargarPDF(id_headboards){
+              let me = this;
+              console.log(id_headboards);
+          window.open(me.url+'/ficha/cargarPdfHeadboards?id_headboards='+id_headboards, '_blank');          
+          }
     }
   }
 </script>

@@ -60,6 +60,7 @@ Route::put('/analysis/update', 'AnalysisController@update');
 Route::delete('/analysis/destroy/{id}', 'AnalysisController@destroy');
 Route::get('/analysisget', 'AnalysisController@getAnalysis');
 Route::get('categories', 'AnalysisController@getCategory');
+Route::get('/ficha/cargarPdfHeadboards', 'HeadboardsController@cargarPdfHeadboards');
 
 Route::post('/category/store', 'CategoryController@store');
 Route::get('/category/index', 'CategoryController@index');
