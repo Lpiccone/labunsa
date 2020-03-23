@@ -60,7 +60,7 @@ Route::put('/analysis/update', 'AnalysisController@update');
 Route::delete('/analysis/destroy/{id}', 'AnalysisController@destroy');
 Route::get('/analysisget', 'AnalysisController@getAnalysis');
 Route::get('categories', 'AnalysisController@getCategory');
-Route::get('/ficha/cargarPdfHeadboards', 'HeadboardsController@cargarPdfHeadboards');
+
 
 Route::post('/category/store', 'CategoryController@store');
 Route::get('/category/index', 'CategoryController@index');
@@ -79,6 +79,7 @@ Route::delete('/headboards/destroy/{id}', 'HeadboardsController@destroy');
 Route::get('referenciasget', 'HeadboardsController@getReferencias');
 Route::get('patientsget', 'HeadboardsController@getPatients');
 Route::get('analysisget', 'HeadboardsController@getAnalysis');
+Route::get('/ficha/cargarPdfHeadboards', 'HeadboardsController@cargarPdfHeadboards');
 
 Route::post('/in/store', 'In_ReactivesController@store');
 Route::get('/in/index', 'In_ReactivesController@index');

@@ -31,6 +31,7 @@ Vue.component('analysis3', require('./components/Analysis3.vue'));
 Vue.component('category', require('./components/Category.vue'));
 Vue.component('detail', require('./components/Detail.vue'));
 Vue.component('headboards', require('./components/Headboards.vue'));
+Vue.component('headboards2', require('./components/Headboards2.vue'));
 Vue.component('parameter', require('./components/Parameter.vue'));
 Vue.component('patient', require('./components/Patient.vue'));
 Vue.component('referencia', require('./components/Referencia.vue'));

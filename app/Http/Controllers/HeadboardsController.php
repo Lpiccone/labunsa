@@ -19,7 +19,7 @@ class HeadboardsController extends Controller
         $headboards = DB::table('headboards')
                 ->join('referencias', 'referencias.id_referencia', '=', 'headboards.id_referencia')
                 ->join('patients', 'patients.id_patient', '=', 'headboards.id_patient')
-                ->select('referencias.referencia_name', DB::raw("CONCAT(patients.last_name_patient,',',patients.name_patient) as display_name"), 'headboards.total', 'headboards.created_at')
+                ->select('referencias.referencia_name', DB::raw("CONCAT(patients.last_name_patient,',',patients.name_patient) as display_name"), 'headboards.total', 'headboards.created_at','headboards.id_headboards')
                 ->orderBy('headboards.id_headboards','desc')
                 ->get();    
         return $headboards;

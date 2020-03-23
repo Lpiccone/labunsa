@@ -135,7 +135,7 @@
       </template>
 
       <template v-slot:cell(actions)="row">
-        <b-button size="sm" @click="cargarPDF(row.item.id_headboards)" class="mr-1">
+        <b-button size="sm" @click="cargarPDF(row.item.id_analysis)" class="mr-1">
           PDF
         </b-button>
       </template>
@@ -148,11 +148,6 @@
         </b-card>
       </template>
     </b-table>
-
-    <!-- Info modal -->
-    <b-modal :id="infoModal.id" :title="infoModal.title" ok-only @hide="resetInfoModal">
-      <pre>{{ infoModal.content }}</pre>
-    </b-modal>
   </b-container>
 </template>
 
