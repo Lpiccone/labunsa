@@ -138,6 +138,12 @@
         <b-button size="sm" @click="cargarPDF(row.item.id_analysis)" class="mr-1">
           PDF
         </b-button>
+        <b-button size="sm" @click="abrirmodal(row.item)" class="mr-1">
+          Editar
+        </b-button>
+        <b-button size="sm" @click="eliminar(row.item.id_analysis)" class="mr-1">
+          Eliminar
+        </b-button>
       </template>
 
       <template v-slot:row-details="row">
@@ -148,6 +154,10 @@
         </b-card>
       </template>
     </b-table>
+    <!-- Info modal -->
+    <b-modal :id="infoModal.id" :title="infoModal.title" ok-only @hide="resetInfoModal">
+      <pre>{{ infoModal.content }}</pre>
+    </b-modal>
   </b-container>
 </template>
 
@@ -157,6 +167,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
   export default {
     data() {
       return {
+        
         id_analysis_category:0,
             id_cash:0,
             modal : 0,
@@ -275,6 +286,17 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
                 }).catch(function (error) {
                     console.log(error);
                 });
+            },
+            abrirModal(data = []){
+              this.modal=1;
+              this.tituloModal='Actualizar Analysis';
+              this.tipoAccion=2;
+              this.id_analysis = data['id_analysis'];
+              this.id_analysis_category = data['id_analysis_category'];
+              this.id_cash = data['id_cash'];
+              this.name_analysis = data['name_analysis'];
+              this.description = data['description'];
+              this.price = data['price'];
             },
             cargarPDF(id_headboards){
               let me = this;

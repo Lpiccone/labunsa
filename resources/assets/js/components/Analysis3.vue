@@ -65,10 +65,13 @@
       }
     },
     props:['url'],
+    created(){
+          this.getCategorys();
+        },
     methods: {
       getCategorys: function () {
           axios.get("categories").then(({ data }) => (this.categorys = data));
-          console.log({ data });
+          console.log(this.categorys);
         },
       onSubmit(evt) {
         evt.preventDefault()
@@ -100,7 +103,8 @@
         this.$nextTick(() => {
           this.show = true
         })
-      }
+      },
+      
     }
   }
 </script>

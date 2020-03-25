@@ -118,3 +118,9 @@ Route::post('/result/store', 'ResultController@store');
 Route::get('/result/index', 'ResultController@index');
 Route::put('/result/update', 'ResultController@update');
 Route::delete('/result/destroy/{id}', 'ResultController@destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/callback/{provider}', 'SocialController@callback');

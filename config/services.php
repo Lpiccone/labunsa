@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => '809514991769-r4ia5ern85gd8bhk9qspq3ks9snoddbo.apps.googleusercontent.com',
+        'client_secret' => 'AgIQCmB6iOaApmMeep_Occp-',
+        'redirect' => 'https://desarrollo.unsa.edu.pe/labunsa/public/callback/google',
+    ],
+
 ];

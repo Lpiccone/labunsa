@@ -77,7 +77,7 @@
 			<div class="content">
 				<div>
 					<!--<vistaanalysis :url="url"></vistaanalysis>-->
-					<headboards2 :url="url"></headboards2>
+					<headboards3 :url="url"></headboards3>
 				</div>
 			</div>			
         </div>

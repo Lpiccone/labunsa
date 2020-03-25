@@ -73,12 +73,11 @@
         </style>
     </head>
     <body>
+
         <div id="app">			
 			<div class="content">
-				<div>
 					<!--<vistaanalysis :url="url"></vistaanalysis>-->
 					<analysis2 :url="url"></analysis2>
-				</div>
 			</div>			
         </div>
         <script src="js/app.js"></script>
